@@ -76,8 +76,13 @@ public class StringUtilities {
      */
     public static Character getMiddleCharacter(String inputValue){
         char[] newChar = inputValue.toCharArray();
-        char first = newChar[(newChar.length/2)-1];
-        return first;
+        if ((newChar.length) % 2 == 0) {
+            char first = newChar[(newChar.length / 2) - 1];
+            return first;
+        } else {
+            char first = newChar[(newChar.length / 2)];
+            return first;
+        }
     }
 
     /**
